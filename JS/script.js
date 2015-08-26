@@ -12,20 +12,25 @@ if (isNaN(+answer)) {
 	numRequired();
 	} 
 
+var ul = document.createElement("ul");
+document.getElementById("ouput").appendChild(ul);
+
 function fizzbuzz(answer) {
 	for (var i = 1; i <= +answer; i++) {
+		el = document.createElement("li");
 			if (i % 15 === 0) {
-			console.log("fizzbuzz");
+			el.textContent = "fizzbuzz";
 			}
 		else if (i % 3 === 0) {
-			console.log("fizz");
+			el.textContent = "fizz";
 			}
 		else if (i % 5 === 0) {
-			console.log("buzz");
+			el.textContent = "buzz";
 			} 
 		else {
-			console.log(i);
+			el.textContent = i;
 			}
+			ul.appendChild(el);
 		}
 	}
 
